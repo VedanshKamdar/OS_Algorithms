@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>FCFS Disk Scheduling Algorithm</title>
+  <link rel="stylesheet" type="text/css" href="style_disk.css">
+  <link rel="stylesheet" href="animation.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+</head>
+
+<body>
+  <header>
+    <h1 class="logo">OPERATING SYSTEM PROJECT</h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="main.html" target="_blank">Home</a></li>
+        <li><a href="algorithm1.html" target="_blank">Priority Preemptive</a></li>
+        <li><a href="algorithm2.html" target="_blank">Peterson's Solution</a></li>
+        <li><a href="algorithm3.html" target="_blank">FCFS Disk Scheduling</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="container_docs" data-aos="zoom-in-up">
+    <h1>What is First-Come First-Serve Disk Scheduling Algorithm</h1>
+    <p>First-Come, First-Serve (FCFS) is a disk scheduling algorithm in which the disk access requests are served in the
+      order in which they arrive, also known as a FIFO (First-In-First-Out) method. This means that the request that is
+      first in the queue will be serviced first, regardless of its location on the disk. <br><br>
+
+      The FCFS algorithm is simple and easy to implement, but it may not be the most efficient scheduling algorithm
+      because it does not take into account the distance between the current position of the disk arm and the location
+      of the next request. This can result in longer seek times and increased disk access time.
+
+      <br>
+    </p>
+
+    <h4>
+      <li>Advantages of First-Come First-Serve Disk Scheduling Algorithm</li>
+    </h4>
+    <p>Page: a fixed size block of memory used to store data and code from a process.<br><br>
+      Page fault: occurs when a program attempts to access a page that is not currently in memory. The operating
+      system must then fetch the page from secondary storage (such as a hard disk) and load it into memory, which
+      can be slow and impact performance. <br><br>
+      Hit ratio: the percentage of page accesses that result in a page hit (i.e., the page is already in memory).
+      A higher hit ratio indicates that a page replacement algorithm is performing well. <br><br>
+      Page replacement is a process of moving a page from memory to disk and loading a new page into memory when
+      the available memory becomes full. This technique allows the operating system to efficiently manage the
+      limited physical memory available on a computer. <br><br>
+    </p>
+
+    <h4>
+      <li>Disadvantages of Peterson's Solution</li>
+    </h4>
+    <p>The main disadvantage of optimal page replacement algorithm is that it is impossible to implement in practice
+      because it requires knowledge of future page requests. As a result, it serves as a theoretical benchmark for
+      other algorithms, but cannot be used as a practical solution. Additionally, the algorithm is not efficient
+      for real-time systems because it requires a lot of processing power to calculate the optimal page
+      replacement decision.
+
+    </p>
+
+    <br>
+  </section>
+  <h1>FCFS Disk Scheduling Algorithm</h1>
+
+  <label for="queue">Enter the disk request queue:</label>
+  <input type="text" id="queue" placeholder="e.g. 98,183,37,122,14,124,65,67">
+
+  <button onclick="simulate()">Simulate</button>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Request</th>
+        <th>Start</th>
+        <th>End</th>
+      </tr>
+    </thead>
+    <tbody id="output-body"></tbody>
+  </table>
+
+  <script src="script_disk.js"></script>
+  <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+</body>
+
+</html>

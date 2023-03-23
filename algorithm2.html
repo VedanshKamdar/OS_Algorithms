@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Peterson's Solution Simulator</title>
+  <link rel="stylesheet" href="style_peters.css">
+  <link rel="stylesheet" href="animation.css">
+  
+</head>
+
+<body>
+  <header>
+    <h1 class="logo">OPERATING SYSTEM PROJECT</h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="main.html" target="_blank">Home</a></li>
+        <li><a href="algorithm1.html" target="_blank">Priority Preemptive</a></li>
+        <li><a href="algorithm3.html" target="_blank">FCFS</a></li>
+        <li><a href="algorithm4.html" target="_blank">Optimal Page Replacement</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="container_docs" data-aos="zoom-in-up">
+    <h1>What is Peterson's Solution</h1>
+    <p>Peterson's solution is a software-based algorithm that prevents conflicts in concurrent programs by ensuring
+      mutual exclusion, progress, and bounded waiting. It uses two variables, turn and flag, to coordinate access to a
+      critical section. Each process checks the flag variable to see if the other process is in the critical section and
+      sets its own flag to indicate its interest in entering. The process then checks the turn variable to see if it's
+      its turn to enter. If not, it enters a waiting loop until signaled to continue. Peterson's solution is easy to
+      implement and requires only basic hardware support, making it an attractive choice for many applications. However,
+      it may not be suitable for complex or high-performance systems.<br>
+    </p>
+
+    <h4>
+      <li>Need for Peterson's Solution</li>
+    </h4>
+    <p>In operating systems, there may be a need for more than one process. In shared memory, if more than one process
+      is accessing a variable, then the value of that variable is determined by the last process to modify it. This may
+      result in losing important information written during the first process. The location where these processes occur
+      is called the critical section. This problem is called the Critical-Section problem, and one of the solutions to
+      this problem is the Peterson Solution. <br><br></p>
+
+    <h4>
+      <li>Disadvantages of Peterson's Solution</li>
+    </h4>
+    <p>1. The process may take a long time to wait for the other processes to come out of the critical region. It is termed as Busy waiting. <br><br>
+      2. This algorithm may not work on systems having multiple CPUs. <br><br>
+      3. The Peterson solution is restricted to only two processes at a time. <br><br>
+      
+    </p>
+
+    <br>
+  </section>
+  <h1>Peterson's Solution Simulator</h1>
+  <div id="process1" class="process">
+    <h2>Process 1</h2>
+    <button id="p1" class="button">Start</button>
+  </div>
+  <div id="process2" class="process">
+    <h2>Process 2</h2>
+    <button id="p2" class="button">Start</button>
+  </div>
+  <div id="process3" class="process">
+    <h2>Process 3</h2>
+    <button id="p3" class="button">Start</button>
+  </div>
+  <div id="log"></div>
+  <script src="script_peters.js"></script>
+  
+  
+</body>
+
+</html>

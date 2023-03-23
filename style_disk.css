@@ -1,0 +1,195 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background: linear-gradient(to right, #3c92a780, #0b44489c );
+}
+
+/* Style the page title */
+h1 {
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Style the input prompt */
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Style the input field */
+input[type="text"] {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 80%;
+}
+
+/* Style the button */
+button {
+  padding: 10px 10px;
+  font-size: 15px;
+  background-color: #16454b;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+/* Style the output table */
+table {
+  margin: auto;
+  border-collapse: collapse;
+  margin-top: 20px;
+  width: 80%;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+/* Style the disk head movement chart */
+#chart-container {
+  margin-top: 20px;
+  height: 400px;
+}
+
+.ct-label {
+  font-size: 12px;
+}
+
+.ct-point {
+  stroke-width: 8px;
+}
+
+.ct-line {
+  stroke-width: 3px;
+  stroke-linecap: round;
+}
+
+/* CSS for information */
+.container_docs{
+  border: 2px solid black; 
+  height: auto;
+  padding-top:50px;
+  text-align: center;
+  background-color: rgb(225, 231, 231);
+  border-radius: 20px;
+  width: 80%;
+  margin-left:auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bolder;
+  background-color: rgba(255, 255, 255, 0.568);
+}
+
+.container_docs h1{
+  font-size: 36px;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.container_docs p{
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: left;
+  margin-top: 15px;
+  font-size: 20px;
+  padding-bottom: 50px;
+  line-height : 30px;
+}
+
+.container_docs li{
+  text-align: left;
+  line-height: normal;
+  margin-left: 15px;
+  font-size:20px ;
+}
+
+.special li{
+  margin-left: 10px;
+  margin-right: 10px;
+  line-height: 25px;
+  padding-top: 20px;
+}
+
+.container_docs blod{
+  font-weight: 900;
+}
+
+.container_docs:hover{
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.644);
+  transition: 0.3s;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    border-bottom: 5px solid #000000;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    color: #0c0c0c;
+  }
+  
+  .logo {
+    font-size: 30px;
+    font-weight:900;
+    border-bottom:  solid #000000;
+    padding-bottom: 5px;
+  }
+  
+  .nav-links {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    
+    display:flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    
+    margin-right: 20px;
+    
+  }
+  
+  .nav-links li:last-child {
+    margin-right: 10;
+    
+  }
+  
+  .nav-links a {
+    display:inline-flex;
+    padding: 5px;
+    border-radius: 60%;
+    color: #0c0d0d;
+    text-decoration:solid;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    background-color: #1c1919;
+    color: rgb(200, 203, 206);
+  }

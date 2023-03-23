@@ -1,0 +1,115 @@
+body{
+  background: linear-gradient(to right, #3c92a780, #0b44489c );
+}
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 20px;
+	border-bottom: 5px solid #000000;
+	font-family: 'Raleway', sans-serif;
+	color: #111a4b;
+}
+.logo {
+	font-size: 30px;
+	font-weight:900;
+	border-bottom:  solid #000000;
+	padding-bottom: 5px;
+  }
+  
+  .nav-links {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bolder;
+	
+	display:flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+  }
+  
+  .nav-links li {
+	
+	margin-right: 20px;
+	
+  }
+  
+  .nav-links li:last-child {
+	margin-right: 10;
+	
+  }
+  
+  .nav-links a {
+	display:inline-flex;
+	padding: 10px;
+	border-radius: 60%;
+	
+	color: #111a4b;
+	text-decoration:solid;
+	transition: background-color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+	background-color: #182727;
+	color: rgb(183, 203, 226);
+  }
+    h1 {
+        text-align: center;
+        margin-top: 0; /* To remove default top margin */
+        font-family: 'Poppins', sans-serif;
+        font-size: 50px; /* Adjust font size as per your requirement */
+      }
+      
+.container_docs{
+    /* border: 2px solid black; */
+    height: auto;
+    padding-top:50px;
+    text-align: center;
+    background-color: rgb(225, 231, 231);
+    border-radius: 20px;
+    width: 80%;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgba(255, 255, 255, 0.568);
+}
+
+.container_docs h1{
+    font-size: 36px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.container_docs p{
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: left;
+    margin-top: 15px;
+    font-size: 20px;
+    padding-bottom: 50px;
+    line-height : 30px;
+}
+
+.container_docs li{
+    text-align: left;
+    line-height: normal;
+    margin-left: 15px;
+    font-size:20px ;
+}
+
+.special li{
+    margin-left: 10px;
+    margin-right: 10px;
+    line-height: 25px;
+    padding-top: 20px;
+}
+
+.container_docs blod{
+    font-weight: 900;
+}
+
+.container_docs:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.644);
+    transition: 0.3s;
+}

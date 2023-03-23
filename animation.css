@@ -1,0 +1,15 @@
+body {
+    animation: zoomout 0.8s;
+  }
+  
+  @keyframes zoomout {
+    from {
+      transform: scale(1.2);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  

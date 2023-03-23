@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Optimal Page Replacement Simulator</title>
+	<link rel="stylesheet" type="text/css" href="style_page.css">
+	<link rel="stylesheet" href="animation.css">
+</head>
+
+<body>
+	<header>
+		<h1 class="logo">OPERATING SYSTEM PROJECT</h1>
+		<nav>
+			<ul class="nav-links">
+				<li><a href="main.html" target="_blank">Home</a></li>
+				<li><a href="algorithm1.html" target="_blank">Priority Preemptive</a></li>
+				<li><a href="algorithm2.html" target="_blank">Peterson's Solution</a></li>
+				<li><a href="algorithm3.html" target="_blank">FCFS Disk Scheduling</a></li>
+			</ul>
+		</nav>
+	</header>
+	<section class="container_docs" data-aos="zoom-in-up">
+		<h1>What is Optimal Page Replacement Algorithm</h1>
+		<p>The optimal page replacement algorithm is a theoretical algorithm that selects the page for replacement that
+			will not be
+			used for the longest period of time in the future. This algorithm is impossible to implement in practice as
+			it requires
+			knowledge of future page requests, but serves as a performance benchmark for other page replacement
+			algorithms.
+
+			<br>
+		</p>
+
+		<h4>
+			<li>Terms related to Optimal Page Replacement Algorithm</li>
+		</h4>
+		<p>Page: a fixed size block of memory used to store data and code from a process.<br><br>
+			Page fault: occurs when a program attempts to access a page that is not currently in memory. The operating
+			system must then fetch the page from secondary storage (such as a hard disk) and load it into memory, which
+			can be slow and impact performance. <br><br>
+			Hit ratio: the percentage of page accesses that result in a page hit (i.e., the page is already in memory).
+			A higher hit ratio indicates that a page replacement algorithm is performing well. <br><br>
+			Page replacement is a process of moving a page from memory to disk and loading a new page into memory when
+			the available memory becomes full. This technique allows the operating system to efficiently manage the
+			limited physical memory available on a computer. <br><br>
+		</p>
+
+		<h4>
+			<li>Disadvantages of Peterson's Solution</li>
+		</h4>
+		<p>The main disadvantage of optimal page replacement algorithm is that it is impossible to implement in practice
+			because it requires knowledge of future page requests. As a result, it serves as a theoretical benchmark for
+			other algorithms, but cannot be used as a practical solution. Additionally, the algorithm is not efficient
+			for real-time systems because it requires a lot of processing power to calculate the optimal page
+			replacement decision.
+
+		</p>
+
+		<br>
+	</section>
+	<div class="container">
+		<h1>Optimal Page Replacement Simulator</h1>
+		<div class="input-section">
+			<h2>Enter Page Reference String:</h2>
+			<input type="text" id="page-reference-string" placeholder="Enter comma-separated page numbers">
+			<button onclick="simulate()">Simulate</button>
+		</div>
+		<div class="output-section">
+			<h2>Simulation Results:</h2>
+			<p id="page-faults">Page Faults: 0</p>
+			<p id="page-replacements">Page Replacements: 0</p>
+			<p id="page-frame-states">Page Frame States: </p>
+		</div>
+	</div>
+
+	<script src="script_page.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<canvas id="myChart"></canvas>
+</body>
+
+</html>
