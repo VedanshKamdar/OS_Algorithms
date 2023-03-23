@@ -17,7 +17,7 @@
         <li><a href="main.html" target="_blank">Home</a></li>
         <li><a href="algorithm1.html" target="_blank">Priority Preemptive</a></li>
         <li><a href="algorithm2.html" target="_blank">Peterson's Solution</a></li>
-        <li><a href="algorithm3.html" target="_blank">FCFS Disk Scheduling</a></li>
+        <li><a href="algorithm4.html" target="_blank">Optimal Page Replacement</a></li>
       </ul>
     </nav>
   </header>
@@ -37,25 +37,30 @@
     <h4>
       <li>Advantages of First-Come First-Serve Disk Scheduling Algorithm</li>
     </h4>
-    <p>Page: a fixed size block of memory used to store data and code from a process.<br><br>
-      Page fault: occurs when a program attempts to access a page that is not currently in memory. The operating
-      system must then fetch the page from secondary storage (such as a hard disk) and load it into memory, which
-      can be slow and impact performance. <br><br>
-      Hit ratio: the percentage of page accesses that result in a page hit (i.e., the page is already in memory).
-      A higher hit ratio indicates that a page replacement algorithm is performing well. <br><br>
-      Page replacement is a process of moving a page from memory to disk and loading a new page into memory when
-      the available memory becomes full. This technique allows the operating system to efficiently manage the
-      limited physical memory available on a computer. <br><br>
+    <p>FCFS is a straightforward scheduling algorithm that does not require complex calculations or overhead. It is
+      easy to implement in software and hardware. <br><br>
+      FCFS is a fair scheduling algorithm because it serves the disk access requests in the order in which they
+      arrive. This means that each request has an equal chance of being serviced, and no request is given preferential
+      treatment. <br><br>
+      FCFS guarantees that all disk access requests will eventually be serviced, even if some requests have to wait
+      for a long time. This prevents any request from being starved of disk access. <br><br>
+      FCFS does not reorder the disk access requests, which means that it does not interfere with the order of data
+      on the disk. This can be important in certain applications where the order of data is important, such as video or
+      audio playback. <br><br>
     </p>
 
     <h4>
-      <li>Disadvantages of Peterson's Solution</li>
+      <li>Disadvantages of First-Come First-Serve Disk Scheduling Algorithm</li>
     </h4>
-    <p>The main disadvantage of optimal page replacement algorithm is that it is impossible to implement in practice
-      because it requires knowledge of future page requests. As a result, it serves as a theoretical benchmark for
-      other algorithms, but cannot be used as a practical solution. Additionally, the algorithm is not efficient
-      for real-time systems because it requires a lot of processing power to calculate the optimal page
-      replacement decision.
+    <p>Long waiting times: FCFS may result in some requests waiting for a long time to be serviced, especially if there
+      are other requests ahead of them in the queue. This can lead to increased disk access time and lower system
+      performance. <br><br>
+      Inefficient use of disk: FCFS does not take into account the location of the next request on the disk, which can
+      result in unnecessary disk head movement and longer seek times. This can cause decreased efficiency and slower
+      overall performance of the system. <br><br>
+      No priority handling: FCFS does not consider the priority of the requests, which can result in lower priority
+      requests waiting for a long time to be serviced while higher priority requests are delayed. This can lead to
+      inefficient use of system resources and lower system performance. <br><br>
 
     </p>
 
