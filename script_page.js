@@ -4,6 +4,7 @@ const pageFaults = document.getElementById("page-faults");
 const pageReplacements = document.getElementById("page-replacements");
 const pageFrameStates = document.getElementById("page-frame-states");
 
+
 // Define the Optimal Page Replacement Simulator function
 function simulate() {
     // Get the page reference string from the input field
@@ -26,7 +27,7 @@ function simulate() {
 
     // Loop through the pages in the input array
     for (let i = 0; i < numPages; i++) {
-        // If the page is not in any of the frames, it is a page fault
+        // If the page is not in any of the frames, it is a page fault  
         if (!pageFrames.includes(pages[i])) {
             // Increment the page fault count
             faults++;
@@ -70,11 +71,14 @@ function simulate() {
         // Add the current state of the page frames to the frameStates array
         frameStates.push(pageFrames.slice());
     }
+    // // Calculate the hit ratio
+    // const hitPercentage = ((hits / numPages) * 100).toFixed(2);
 
     // Update the output elements in the HTML document with the simulation results
     pageFaults.innerHTML = `Page Faults: ${faults}`;
     pageReplacements.innerHTML = `Page Replacements: ${replacements}`;
     pageFrameStates.innerHTML = `Page Frame States: ${frameStates.map(state => `[${state.join(", ")}]`).join(" => ")}`;
+    
 
     // Create a bar chart to display the frequency of page requests and page faults
 const chartData = {
