@@ -1,15 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Priority Preemptive
-    </title>
-    <link rel="stylesheet" href="style_pri_pre.css">
-    <link rel="stylesheet" href="animation.css">
-</head>
-<body>
-    <h1>This page is under development :)</h1>
-</body>
+<html>
+  <head>
+    <title>Priority Preemptive Scheduling Simulator</title>
+    <style>
+      /* Add your CSS here */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Priority Preemptive Scheduling Simulator</h1>
+      <div class="input-section">
+        <label for="process-name">Process Name:</label>
+        <input type="text" id="process-name" />
+        <label for="burst-time">Burst Time:</label>
+        <input type="number" id="burst-time" />
+        <<label for="priority">Priority:</label>
+        <input type="number" id="priority" />
+        <button onclick="addProcess()">Add Process</button>
+      </div>
+      <div class="output-section">
+        <div class="gantt-chart"></div>
+        <table>
+          <thead>
+            <tr>
+              <th>Process Name</th>
+              <th>Burst Time</th>
+              <th>Priority</th>
+              <th>Waiting Time</th>
+              <th>Turnaround Time</th>
+            </tr>
+          </thead>
+          <tbody id="process-table"></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
