@@ -1,39 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Priority Preemptive Scheduling Simulator</title>
-    <style>
-      /* Add your CSS here */
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Priority Preemptive Scheduling Simulator</h1>
-      <div class="input-section">
-        <label for="process-name">Process Name:</label>
-        <input type="text" id="process-name" />
-        <label for="burst-time">Burst Time:</label>
-        <input type="number" id="burst-time" />
-        <<label for="priority">Priority:</label>
-        <input type="number" id="priority" />
-        <button onclick="addProcess()">Add Process</button>
-      </div>
-      <div class="output-section">
-        <div class="gantt-chart"></div>
-        <table>
-          <thead>
-            <tr>
-              <th>Process Name</th>
-              <th>Burst Time</th>
-              <th>Priority</th>
-              <th>Waiting Time</th>
-              <th>Turnaround Time</th>
-            </tr>
-          </thead>
-          <tbody id="process-table"></tbody>
-        </table>
-      </div>
-    </div>
-    <script src="script.js"></script>
-  </body>
+<head>
+	<title>Priority Preemptive Scheduler Simulator</title>
+	<link rel="stylesheet" href="style_pri_pre.css">
+</head>
+<body>
+	<h1>Priority Preemptive Scheduler Simulator</h1>
+	<div>
+		<label for="process-count">Number of Processes:</label>
+		<input type="number" id="process-count" min="1" max="10" value="5">
+		<button onclick="generateInputs()">Generate Inputs</button>
+	</div>
+	<div id="inputs-container"></div>
+	<button onclick="simulate()">Simulate</button>
+	<h2>Results</h2>
+	<table>
+		<thead>
+			<tr>
+				<th>Process</th>
+				<th>Arrival Time</th>
+				<th>Burst Time</th>
+				<th>Priority</th>
+				<th>Turnaround Time</th>
+				<th>Waiting Time</th>
+			</tr>
+		</thead>
+		<tbody id="results-container">
+		</tbody>
+	</table>
+	<h2>Gantt Chart</h2>
+	<div id="gantt-container"></div>
+	<script src="script_pri_pre.js"></script>
+</body>
 </html>
