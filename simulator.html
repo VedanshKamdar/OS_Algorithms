@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simulator Page</title>
+    <link rel="stylesheet" type="text/css" href="style_simulator.css">
+    <link rel="stylesheet" href="animation.css">
+</head>
+
+<body>
+
+    <header>
+        <h1 class="logo">OPERATING SYSTEM PROJECT</h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="main.html">Home</a></li>
+                <li><a href="read_more.html">Documentation</a></li>
+                <!-- <li><a href="simulators.html" target="_blank">Simulators</a></li> -->
+                <li class="dropdown">
+                    <a href="simulator.html" class="dropbtn">Simulators</a>
+                    <div class="dropdown-content">
+                        <a href="priority_preemptive.html">Priority Preemptive</a>
+                        <a href="fcfs_disk_scheduling.html">FCFS Disk Scheduling</a>
+                        <a href="petersons.html">Peterson's Solution</a>
+                        <a href="optimal_page_replacement.html">Optimal Page Replacement</a>
+                    </div>
+                </li>
+                <li><a href="team.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="box-container">
+        <div class="box">
+            <h2>Priority Preemptive</h2>
+            <p>Priority preemptive scheduling is a CPU scheduling algorithm where processes with higher priority are
+                given preference over processes with lower priority. The CPU can preempt a running process if a higher
+                priority process becomes available, allowing for better response time and throughput for high-priority
+                tasks. </p>
+            <div class="btn-container">
+                <button onclick="window.location.href='algorithm1.html'">Theory</button>
+                <button onclick="window.location.href='priority_preemptive.html'">Simulator</button>
+            </div>
+        </div>
+        
+        <div class="box">
+            <h2>Peterson's Solution</h2>
+            <p>Peterson's solution is a synchronization algorithm for mutual exclusion in concurrent programming. It
+                ensures that multiple processes or threads can access a shared resource without interfering with each
+                other. The algorithm uses two shared variables and strict turn-taking to guarantee mutual exclusion and
+                prevent deadlock.</p>
+            <div class="btn-container">
+                <button onclick="window.location.href='algorithm2.html'">Theory</button>
+                <button onclick="window.location.href='petersons.html'">Simulator</button>
+            </div>
+        </div>
+        
+        <div class="box">
+            <h2>First-Come-First-Serve Disk Scheduling</h2>
+            <p>First-Come-First-Serve (FCFS) is a disk scheduling algorithm where the requests are processed in the
+                order they arrive. The head of the disk moves in a direction, servicing all requests until it reaches
+                the end and then moves back. It has high waiting time for requests that arrive later in the queue. </p>
+            <div class="btn-container">
+                <button onclick="window.location.href='algorithm3.html'">Theory</button>
+                <button onclick="window.location.href='fcfs_disk_scheduling.html'">Simulator</button>
+            </div>
+        </div>
+        
+        <div class="box">
+            <h2>Optimal Page Replacement</h2>
+            <p>Optimal Page Replacement (OPR) is a page replacement algorithm where the page to be replaced is the one
+                that will not be needed for the longest period of time in the future. It provides optimal performance,
+                but requires future knowledge of the reference pattern which is not practical, hence rarely used.</p>
+            <div class="btn-container">
+                <button onclick="window.location.href='algorithm4.html'">Theory</button>
+                <button onclick="window.location.href='optimal_page_replacement.html'">Simulator</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

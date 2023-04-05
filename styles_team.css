@@ -3,9 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@600&display=swap');
-
-  
 body {
 	margin: 0;
 	font-family: Georgia (serif);
@@ -26,9 +23,9 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding-left: 20px;
-	border-bottom: 2px solid #ccc;
-	font-family: 'Alkatra', cursive;
+	padding: 20px 20px;
+	border-bottom: 5px solid #ccc;
+	font-family: 'Raleway', sans-serif;
 	color: #0e3637;
   }
   
@@ -36,10 +33,10 @@ body {
 	font-size: 30px;
 	font-weight:bolder;
 	border-bottom:  solid #0e3637;
-	padding-bottom: 3px;
+	padding-bottom: 5px;
   }
   
-.nav-links {
+  .nav-links {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: bolder;
 	display:flex;
@@ -61,25 +58,25 @@ body {
   
   .nav-links a {
 	display:inline-flex;
-	padding: 1rem;
+	padding: 10px;
+	border-radius: 60%;
+	
 	color: #bfc9cc;
-	text-decoration: none;
-	transition: all 0.5s ease;
+	text-decoration:solid;
+	transition: background-color 0.3s ease;
   }
   
   .nav-links a:hover {
 	background-color: #ffffff;
 	color: rgb(19, 31, 45);
   }
-
-   
-
+  
   /* Image overlay styles */
   
   .image-overlay {
 	display: flex;
 	position: relative;
-	height: 650px;
+	height: 620px;
 	background-image: url('placeholder.jpg');
 	background-size:cover;
 	background-position: center;
@@ -152,6 +149,19 @@ body {
     background: transparent;
     border-radius: 12px;
 }
+  /* .hero-btn {
+	padding: 1rem 2rem;
+	border:none;
+	background-color: #f0ad4e;
+	color: white;
+	font-size: 1.2rem;
+	border-radius: 25px;
+	transition: background-color 0.3s ease-in-out;
+	text-decoration: none; 
+	margin-top: 10rem;
+	margin-bottom: 130rem;
+	
+  } */
   
   .hero-btn:hover {
 	background: linear-gradient(to right, #4d9ebb, #a4deec );
@@ -159,37 +169,122 @@ body {
 	font-weight: bolder;
   }
   
-  /* Style the dropdown button */
-.dropbtn {
-	display: inline-block;
-	color: white;
+  /* Team section styles */
+  
+  .team-section {
+	padding: 40px 0;
+  }
+  
+  .section-heading {
+	font-family: 'Poppins', sans-serif;
+	font-size: 35px;
+	font-weight: bold;
 	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-	border: none;
+	margin-bottom: 20px;
   }
   
-  /* Style the dropdown content */
-  .dropdown-content {
-	display: none;
+  .team-grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .team-member {
+	width: 300px;
+	margin: 20px;
+	position: relative;
+  }
+  
+  /* .team-member img {
+	border-radius: 10px; 
+  width: 300px; 
+  height: 300px;
+  object-fit: cover;
+  } */
+  
+  /* .member-info {
 	position: absolute;
-	z-index: 1;
+	bottom: 150px;
+	
+	left: 0;
+	width: 100%;
+	padding: 15px;
+	background-color: #fff;
+	opacity: 0;
+	overflow-wrap: normal;
+	transition: opacity 0.3s ease;
+  } */
+
+  /* .member-info {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
   }
   
-  .dropdown-content a {
-	color: rgb(231, 242, 244);
-	padding: 12px 16px;
-	text-decoration: none;
-	display: block;
+  .team-member:hover .member-info {
+	opacity: 0.8;
+  } */
+
+  .name{
+	font-family: 'Montserrat', sans-serif;
+  }
+
+  .team-member {
+	text-align: center;
+	position: relative;
+	display: inline-block;
+	margin-right: 20px;
+  }
+
+  .team-member h3{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 21px;
   }
   
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {
-	display: block;
+  .team-member img {
+	object-fit: cover;
+	border-radius: 10%;
+	height: 300px;
+	width: 300px;
+	transition: filter 0.3s ease-out;
   }
   
-  /* Change the background color of the dropdown menu links on hover */
-  .dropdown-content a:hover {
-	background-color: #b1dee9;
+  .team-member .member-info {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	text-align: center;
+	opacity: 0;
+	transition: opacity 0.3s ease-out;
   }
   
+  .team-member:hover img {
+	filter: brightness(50%);
+  }
+  
+  .team-member:hover .member-info {
+	opacity: 1;
+  }
+
+  .container {
+    height: 200px;
+    position: relative;
+    border: 3px solid green;
+  }
+  
+  .vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  .team{
+    margin:0 26.563rem 0rem 1rem;
+  }

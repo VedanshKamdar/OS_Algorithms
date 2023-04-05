@@ -4,8 +4,9 @@
 body {
   font-family: 'Raleway', sans-serif;
   background: linear-gradient(to right, #3c92a780, #0b44489c );
+  
 }
-
+/* 
 .container {
   border-radius: 20px;
   max-width: 800px;
@@ -68,8 +69,96 @@ h1 {
 .output-section p {
   font-size: 16px;
   margin-bottom: 10px;
+} */
+label{
+  font-size: larger;
+  text-align: left;
 }
-
+  /* Center the content */
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  /* Style the page title */
+  h1 {
+    color: #333;
+    text-align: center;
+    margin-top: 30px;
+  }
+  h2{
+    text-align: center;
+    /* border: 1px solid black; */
+  }
+  /* Style the input fields and button */
+  input[type="text"],
+  input[type="number"],
+  button {
+    display: flexbox;
+    margin: 10px auto;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  input[type="text"],
+  input[type="number"] {
+    width: 80%;
+    max-width: 400px;
+  }
+  .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    height: 200px;
+    /* border: 1px solid black; */
+    width: auto;
+  }  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  /* Style the output table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  th,
+  td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+  }
+  
+  th {
+    background-color: #183e4d;
+    color: #fff;
+  } 
+  /* td:last-child {
+    font-weight: bold;
+    color: #f00;
+  }   */
+#fault{
+    font-weight: bold;
+    color: rgb(255, 0, 0);
+}
+#hit{
+    font-weight: bold;
+    color: green;
+}
+#hbg{
+  background-color: green;
+}
+#fbg{
+  background-color: red;
+}
 
 
 /* CSS for information */

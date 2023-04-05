@@ -1,112 +1,94 @@
-// Get elements from the HTML document
-const pageReferenceString = document.getElementById("page-reference-string");
-const pageFaults = document.getElementById("page-faults");
-const pageReplacements = document.getElementById("page-replacements");
-const pageFrameStates = document.getElementById("page-frame-states");
-
-
-// Define the Optimal Page Replacement Simulator function
-function simulate() {
-    // Get the page reference string from the input field
-    const inputString = pageReferenceString.value;
-
-    // Split the input string by commas and convert to an array of integers
-    const pages = inputString.split(",").map(Number);
-
-    // Get the number of pages and the number of page frames from the input array
-    const numPages = pages.length;
-    const numFrames = 4; // You can change this to any number of frames you want to simulate
-
-    // Initialize the page frame array with all -1s
-    let pageFrames = Array(numFrames).fill(-1);
-
-    // Initialize the page faults, page replacements, and page frame states variables
-    let faults = 0;
-    let replacements = 0;
-    let frameStates = [];
-
-    // Loop through the pages in the input array
-    for (let i = 0; i < numPages; i++) {
-        // If the page is not in any of the frames, it is a page fault  
-        if (!pageFrames.includes(pages[i])) {
-            // Increment the page fault count
-            faults++;
-
-            // If there is an empty frame, add the page to the empty frame
-            if (pageFrames.includes(-1)) {
-                const emptyFrameIndex = pageFrames.indexOf(-1);
-                pageFrames[emptyFrameIndex] = pages[i];
-            }
-            // Otherwise, replace the page that will be accessed farthest in the future
-            else {
-                replacements++;
-
-                // Find the page that will be accessed farthest in the future
-                let farthestPage = -1;
-                let farthestPageIndex = -1;
-                for (let j = 0; j < numFrames; j++) {
-                    let pageFound = false;
-                    for (let k = i + 1; k < numPages; k++) {
-                        if (pageFrames[j] === pages[k]) {
-                            if (k > farthestPageIndex) {
-                                farthestPageIndex = k;
-                                farthestPage = pageFrames[j];
-                            }
-                            pageFound = true;
-                            break;
-                        }
-                    }
-                    if (!pageFound) {
-                        farthestPageIndex = numPages;
-                        farthestPage = pageFrames[j];
-                    }
-                }
-
-                // Replace the farthest page with the current page
-                const replaceIndex = pageFrames.indexOf(farthestPage);
-                pageFrames[replaceIndex] = pages[i];
-            }
-        }
-
-        // Add the current state of the page frames to the frameStates array
-        frameStates.push(pageFrames.slice());
-    }
-    // // Calculate the hit ratio
-    // const hitPercentage = ((hits / numPages) * 100).toFixed(2);
-
-    // Update the output elements in the HTML document with the simulation results
-    pageFaults.innerHTML = `Page Faults: ${faults}`;
-    pageReplacements.innerHTML = `Page Replacements: ${replacements}`;
-    pageFrameStates.innerHTML = `Page Frame States: ${frameStates.map(state => `[${state.join(", ")}]`).join(" => ")}`;
-    
-
-    // Create a bar chart to display the frequency of page requests and page faults
-const chartData = {
-    labels: ["Page Requests", "Page Faults"],
-    datasets: [
-      {
-        label: "Frequency",
-        data: [numPages, faults],
-        backgroundColor: ["rgba(54, 162, 235, 0.2)", "rgba(255, 99, 132, 0.2)"],
-        borderColor: ["rgba(54, 162, 235, 1)", "rgba(255, 99, 132, 1)"],
-        borderWidth: 1
+// function that run optimal page replaacement
+function runOptimalPageReplacement() {
+  let refString = document.getElementById("inputString").value; // storing value of inputString in refString variable
+  let numFrames = document.getElementById("inputFrames").value; // storing value of inputFrames(Frame Size) in refString variable
+  let pages = refString.split(" "); // spilt breaks string according to delimiter passed in argument, here is " "
+  //                                  eg : input 0 1 3 5 (converted into array)-> {0,1,3,5}
+  let numPages = pages.length;     // pages.length return length of string
+  let frames = new Array(numFrames).fill(-1); // initially all frame are initilized by -1
+  let faults = 0;
+  let hits = 0;
+  let nextUse = new Array(numFrames).fill(-1);
+  let tableData = "<tr><th>Reference</th>";
+  for (let i = 0; i < numFrames; i++) {
+      tableData += "<th>Frame " + i + "</th>";
+  }
+  tableData += "<th>Page Status</th></tr>";
+  for (let i = 0; i < numPages; i++) {
+      let found = false;
+      for (let j = 0; j < numFrames; j++) {
+          if (frames[j] == pages[i]) {
+              hits++;
+              found = true;
+              nextUse[j] = findNextUse(pages, i, numPages, frames[j]);
+              break;
+          }
       }
-    ]
-  };
-  
-  const chartOptions = {
-    scales: {
-      y: {
-        beginAtZero: true
+      if (!found) {
+          let index = findOptimal(frames, nextUse, numFrames, pages, i, numPages);
+          frames[index] = pages[i];
+          nextUse[index] = findNextUse(pages, i, numPages, frames[index]);
+          faults++;
       }
-    }
-  };
-  
-  const myChart = new Chart(document.getElementById("myChart"), {
-    type: "bar",
-    data: chartData,
-    options: chartOptions
-  });
-  
+      tableData += "<tr><td>" + pages[i] + "</td>";
+      for (let j = 0; j < numFrames; j++) {
+          if (frames[j] == -1) {
+              tableData += "<td></td>";
+          } else {
+              tableData += "<td>" + frames[j] + "</td>";
+          }
+      }
+      if (!found) {
+          tableData += "<td id=\"fault\";>FAULT</td></tr>";
+      } else {
+          tableData += "<td id=\"hit\">HIT</td></tr>";
+      }
+  }
+  document.getElementById("outputTable").innerHTML = tableData;
+  let hitRatio = (hits / numPages * 100).toFixed(2);
+  let faultRatio = (faults / numPages * 100).toFixed(2);
+  let tableData2 = "<h2>Page Faults: " + faults + "</h2>";
+  // for (let i = 0; i < numFrames; i++) {
+  //     tableData += "<td></td>";
+  // }
+  tableData2 += "<h2>Page Hits: " + hits +"</h2>";
+  tableData2 += "<h2>Fault Ratio : " + faultRatio + "% </h2>"
+  tableData2 += "<h2>Hit Ratio : " + hitRatio + "% </h2>"
+  document.getElementById("ratio_result").innerHTML = tableData2;
 }
 
+function findNextUse(pages, currentIndex, numPages, page) {
+  for (let i = currentIndex + 1; i < numPages; i++) {
+      if (pages[i] == page) {
+          return i;
+      }
+  }
+  return numPages;
+}
+function findOptimal(frames, nextUse, numFrames, pages, currentIndex, numPages) {
+  let index = -1;
+  let farthest = -1;
+  for (let i = 0; i < numFrames; i++) {
+      let found = false;
+      for (let j = currentIndex + 1; j < numPages; j++) {
+          if (frames[i] == pages[j]) {
+              found = true;
+              if (nextUse[i] < j) {
+                  nextUse[i] = j;
+              }
+              break;
+          }
+      }
+      if (!found) {
+          return i;
+      }
+      if (nextUse[i] == numPages) {
+          return i;
+      }
+      if (nextUse[i] > farthest) {
+          farthest = nextUse[i];
+          index = i;
+      }
+  }
+  return index;
+}
