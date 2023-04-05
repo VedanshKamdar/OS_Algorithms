@@ -1,20 +1,125 @@
-/* General styles */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@600&display=swap');
+/* General styles */
+
+/* Fonts */
+
+/* Background */
 body {
-	margin: 0;
-	font-family: Georgia (serif);
-	background: linear-gradient(to right, #3c92a7, #08383b );
-	;
-	color: #ccc;
+    background: linear-gradient(to right, #3c92a7, #08383b );
   }
   
-  .container {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 0 20px;
+body {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+  }
+  
+  
+  /* header {
+	color: #fff;
+
+  } */
+  
+  h1.about-us {
+	margin-top: 10px;
+	font-size: 40px;
+	margin-bottom: 10px;
+  }
+  
+  main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 20px;
+  }
+  
+  .team-member {
+	background-color: #b9dfe4;
+	border: 5px solid #021418;
+	border-radius: 5px;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+	margin: 10px;
+	padding: 20px;
+	text-align: center;
+	width: 400px;
+  }
+  
+  .team-member img {
+	border-radius: 50%;
+	border: 5px solid #021418;
+	height: 250px;
+	margin-bottom: 10px;
+	width: 250px;
+  }
+  
+  .team-member h2 {
+	font-size: 24px;
+	margin-bottom: 10px;
+  }
+  
+  .team-member p {
+	font-size: 18px;
+	margin-bottom: 10px;
+  }
+  
+  .team-member ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+  }
+  
+  .team-member .name {
+	font-size: 24px;
+	margin-bottom: 5px;
+  }
+  
+  .team-member .roll-no {
+	font-size: 16px;
+	margin-bottom: 15px;
+  }
+  
+  .team-member .social-links {
+    display: flex;
+    justify-content: center;
+}
+
+.team-member .social-links li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+  .team-member a {
+	color: #333;
+	text-decoration: none;
+  }
+  
+  .team-member a:hover {
+	color: #007bff;
+  }
+  
+  .team-member i {
+	font-size: 24px;
+	margin: 0 5px;
+  }
+  
+  @media screen and (max-width: 768px) {
+	.team-member {
+	  width: 100%;
+	}
   }
   
   /* Header styles */
@@ -23,20 +128,21 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 20px 20px;
-	border-bottom: 5px solid #ccc;
-	font-family: 'Raleway', sans-serif;
+	padding-left: 20px;
+	
+	font-family: 'Alkatra', cursive;
 	color: #0e3637;
+	
   }
   
   .logo {
 	font-size: 30px;
 	font-weight:bolder;
-	border-bottom:  solid #0e3637;
-	padding-bottom: 5px;
+	border-bottom: solid #0e3637;
+	padding-bottom: 8px;
   }
   
-  .nav-links {
+.nav-links {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: bolder;
 	display:flex;
@@ -58,233 +164,47 @@ body {
   
   .nav-links a {
 	display:inline-flex;
-	padding: 10px;
-	border-radius: 60%;
-	
+	padding: 1rem;
 	color: #bfc9cc;
-	text-decoration:solid;
-	transition: background-color 0.3s ease;
+	text-decoration: none;
+	transition: all 0.5s ease;
   }
   
   .nav-links a:hover {
 	background-color: #ffffff;
 	color: rgb(19, 31, 45);
   }
-  
-  /* Image overlay styles */
-  
-  .image-overlay {
-	display: flex;
-	position: relative;
-	height: 620px;
-	background-image: url('placeholder.jpg');
-	background-size:cover;
-	background-position: center;
-  }
-  
-  .image-overlay::before {
-	content: "";
-	position:absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.704);
 
-  }
-  
-  .image-overlay p {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	color: #ffffff;
-	text-align: center;
-	font-size: 15px;
-	font-weight: bold;
-	
-  }
-
-	.text-box {
-		width: 90%;
-		/* display: flex;
-		flex-direction: column; */
-		color: #fff;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%,-50%);
-		text-align: center;
-		font-family: 'Poppins', sans-serif;
-  }
-  
-  .text-box h1 {
-	font-size: 4rem;
-	font-weight: bolder;
-	margin-top: 2.5rem;
-  }
-  
-  .text-box p {
-	font-size: 1.5rem;
-	font-weight: lighter;
-	width: 70%;
-	display: block;
-	margin-bottom: 1rem;
-	margin-top: 2.5rem;
-  }
-
-  .text-box a{
-	margin-top: 6rem;
-  }
-  .hero-btn {
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-    border: 1px solid #fff;
-    font-size: 20px;
-	font-weight: bolder;
-    position: relative;
-    padding: 12px 34px;
-    cursor: pointer;
-    background: transparent;
-    border-radius: 12px;
-}
-  /* .hero-btn {
-	padding: 1rem 2rem;
-	border:none;
-	background-color: #f0ad4e;
-	color: white;
-	font-size: 1.2rem;
-	border-radius: 25px;
-	transition: background-color 0.3s ease-in-out;
-	text-decoration: none; 
-	margin-top: 10rem;
-	margin-bottom: 130rem;
-	
-  } */
-  
-  .hero-btn:hover {
-	background: linear-gradient(to right, #4d9ebb, #a4deec );
-	color: #08383b;
-	font-weight: bolder;
-  }
-  
-  /* Team section styles */
-  
-  .team-section {
-	padding: 40px 0;
-  }
-  
-  .section-heading {
-	font-family: 'Poppins', sans-serif;
-	font-size: 35px;
-	font-weight: bold;
-	text-align: center;
-	margin-bottom: 20px;
-  }
-  
-  .team-grid {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-  }
-  
-  .team-member {
-	width: 300px;
-	margin: 20px;
-	position: relative;
-  }
-  
-  /* .team-member img {
-	border-radius: 10px; 
-  width: 300px; 
-  height: 300px;
-  object-fit: cover;
-  } */
-  
-  /* .member-info {
-	position: absolute;
-	bottom: 150px;
-	
-	left: 0;
-	width: 100%;
-	padding: 15px;
-	background-color: #fff;
-	opacity: 0;
-	overflow-wrap: normal;
-	transition: opacity 0.3s ease;
-  } */
-
-  /* .member-info {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	text-align: center;
-  }
-  
-  .team-member:hover .member-info {
-	opacity: 0.8;
-  } */
-
-  .name{
-	font-family: 'Montserrat', sans-serif;
-  }
-
-  .team-member {
-	text-align: center;
-	position: relative;
+   /* Style the dropdown button */
+.dropbtn {
 	display: inline-block;
-	margin-right: 20px;
-  }
-
-  .team-member h3{
-	font-family: 'Montserrat', sans-serif;
-	font-size: 21px;
-  }
-  
-  .team-member img {
-	object-fit: cover;
-	border-radius: 10%;
-	height: 300px;
-	width: 300px;
-	transition: filter 0.3s ease-out;
-  }
-  
-  .team-member .member-info {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 100%;
+	color: white;
 	text-align: center;
-	opacity: 0;
-	transition: opacity 0.3s ease-out;
+	padding: 14px 16px;
+	text-decoration: none;
+	border: none;
   }
   
-  .team-member:hover img {
-	filter: brightness(50%);
+  /* Style the dropdown content */
+  .dropdown-content {
+	display: none;
+	position: absolute;
+	z-index: 1;
   }
   
-  .team-member:hover .member-info {
-	opacity: 1;
-  }
-
-  .container {
-    height: 200px;
-    position: relative;
-    border: 3px solid green;
+  .dropdown-content a {
+	color: rgb(231, 242, 244);
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
   }
   
-  .vertical-center {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+	display: block;
   }
-
-  .team{
-    margin:0 26.563rem 0rem 1rem;
+  
+  /* Change the background color of the dropdown menu links on hover */
+  .dropdown-content a:hover {
+	background-color: #b1dee9;
   }
