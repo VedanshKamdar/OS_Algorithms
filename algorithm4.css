@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@600&display=swap');
+/* General styles */
+
+/* Fonts */
+
+/* Background */
+body {
+    background: linear-gradient(to right, #3c92a7, #08383b );
+  }
+  
+body {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+
+
+
+/* CSS for information */
+.container_docs{
+    border: 2px solid black; 
+    height: auto;
+    padding-top:50px;
+    text-align: center;
+    background-color: rgb(225, 231, 231);
+    border-radius: 20px;
+    width: 80%;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    background-color: rgba(255, 255, 255, 0.568);
+  }
+  
+  .container_docs h1{
+    font-size: 36px;
+    margin-top: 10px;
+    font-weight: 600;
+  }
+  
+  .container_docs p{
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: left;
+    margin-top: 15px;
+    font-size: 20px;
+    padding-bottom: 50px;
+    line-height : 30px;
+  }
+  
+  .container_docs li{
+    text-align: left;
+    line-height: normal;
+    margin-left: 15px;
+    font-size:20px ;
+  }
+  
+  .special li{
+    margin-left: 10px;
+    margin-right: 10px;
+    line-height: 25px;
+    padding-top: 20px;
+  }
+  
+  .container_docs blod{
+    font-weight: 900;
+  }
+  
+  .container_docs:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.644);
+    transition: 0.3s;
+  }
+  
+   /* Header styles */
+    
+   header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 20px;
+      border-bottom: 2px solid #ccc;
+      font-family: 'Alkatra', cursive;
+      color: #0e3637;
+    }
+    
+    .logo {
+      font-size: 30px;
+      font-weight:bolder;
+      border-bottom:  solid #0e3637;
+      padding-bottom: 3px;
+    }
+    
+  .nav-links {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bolder;
+      display:flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .nav-links li {
+      
+      margin-right: 20px;
+      
+    }
+    
+    .nav-links li:last-child {
+      margin-right: 10;
+      
+    }
+    
+    .nav-links a {
+      display:inline-flex;
+      padding: 1rem;
+      color: #bfc9cc;
+      text-decoration: none;
+      transition: all 0.5s ease;
+    }
+    
+    .nav-links a:hover {
+      background-color: #ffffff;
+      color: rgb(19, 31, 45);
+    }
+  
+     /* Style the dropdown button */
+  .dropbtn {
+      display: inline-block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      border: none;
+    }
+    
+    /* Style the dropdown content */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+      color: rgb(231, 242, 244);
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    
+    /* Change the background color of the dropdown menu links on hover */
+    .dropdown-content a:hover {
+      background-color: #b1dee9;
+    }
+    

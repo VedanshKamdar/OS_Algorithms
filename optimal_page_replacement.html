@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimal Page Replacement Algorithm</title>
+    <link rel="stylesheet" href="style_page.css">
+    <link rel="stylesheet" href="animation.css">
+</head>
+<body>
+    <header>
+		<h1 class="logo">OPERATING SYSTEM PROJECT</h1>
+		<nav>
+			<ul class="nav-links">
+				<li><a href="main.html">Home</a></li>
+				<li><a href="read_more.html">Documentation</a></li>
+				<!-- <li><a href="simulators.html" target="_blank">Simulators</a></li> -->
+				<li class="dropdown">
+					<a href="simulator.html" class="dropbtn">Simulators</a>
+					<div class="dropdown-content">
+						<a href="priority_preemptive.html">Priority Preemptive</a>
+						<a href="fcfs_disk_scheduling.html">FCFS Disk Scheduling</a>
+						<a href="petersons.html">Peterson's Solution</a>
+						<!-- <a href="optimal_page_replacement.html">Optimal Page Replacement</a> -->
+					</div>
+				</li>
+				<li><a href="team.html">About Us</a></li>
+			</ul>
+		</nav>
+	</header>
+
+    <h1>Optimal Page Replacement</h1>
+    <div class="box">
+    <label for="">Enter page reference string:</label>
+    <input type="text" id="inputString" placeholder="Eg. 1 2 4 3 6 5 1 2 5">
+    <br>
+    <label>Enter number of frames: </label>
+    <input type="number" id="inputFrames" placeholder="Eg. 3">
+    <br>
+    <button onclick="runOptimalPageReplacement()">Run</button>
+    <br><br>
+    </div>
+    <table id="outputTable"></table>
+    <div id="ratio_result"></div>
+
+	<script src="script_page.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<canvas id="myChart"></canvas>
+
+</body>
+</html>

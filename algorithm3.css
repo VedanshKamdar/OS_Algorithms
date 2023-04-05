@@ -3,73 +3,77 @@
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@600&display=swap');
+/* General styles */
 
+/* Fonts */
 
+/* Background */
 body {
-	margin: 0;
-	font-family: 'Raleway',sans-serif;
-	background: linear-gradient(to right, #3c92a7, #08383b );
+    background: linear-gradient(to right, #3c92a7, #08383b );
+  }
+  
+body {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
 }
 
-.box-container {
-   
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .box {
-    width: calc(60% - 20px);
-    margin-top: 10px;
-    margin-bottom: 40px;
-    padding: 20px;
-    background-color: #cde8f0;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease-in-out;
-    background-image: url("");
-    background-size: cover;
-    background-position: center;
+.container_docs{
+    border: 2px solid black; 
+    height: auto;
+    padding-top:50px;
     text-align: center;
+    background-color: rgba(47, 162, 204, 0.568);
+    border-radius: 20px;
+    width: 80%;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgba(255, 255, 255, 0.568);
+    font-weight: bolder;
+  }
+  
+  .container_docs h1{
+    font-size: 36px;
+    margin-top: 10px;
+    font-weight: 600;
+  }
+  
+  .container_docs p{
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: left;
+    margin-top: 15px;
+    font-size: 20px;
+    padding-bottom: 50px;
+    line-height : 30px;
+  }
+  
+  .container_docs li{
+    text-align: left;
+    line-height: normal;
+    margin-left: 15px;
+    font-size:20px ;
+  }
+  
+  .special li{
+    margin-left: 10px;
+    margin-right: 10px;
+    line-height: 25px;
+    padding-top: 20px;
+  }
+  
+  .container_docs blod{
+    font-weight: 900;
+  }
+  
+  .container_docs:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.644);
+    transition: 0.3s;
+  }
 
-  }
-
-  .box h2 {
-    font-size: 25px; /* adjust to your desired font size */
-    font-weight: bold;
-  }
-  
-  .box:hover {
-    box-shadow: 16px 8px 16px 8px #04222bb5;
-  }
-  
-  .btn-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  button {
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #0f4556;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-    margin: 0 5px;
-    font-size: 15px;
-  }
-  
-  button:hover {
-    background-color: #075871;
-    
-    font-weight: 100;
-  }
-  
-
-  /* Header styles */
+   /* Header styles */
   
   header {
 	display: flex;

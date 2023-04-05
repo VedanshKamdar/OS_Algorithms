@@ -1,88 +1,120 @@
-<html>
-    <body>
-        <header>
-            <h1 class="logo">OPERATING SYSTEM PROJECT</h1>
-            <nav>
-              <ul class="nav-links">
-                <li><a href="main.html" target="_blank">Home</a></li>
-                <li><a href="algorithm1.html" target="_blank">Preemptive Priority</a></li>
-                <li><a href="algorithm2.html" target="_blank">Peterson's Solution</a></li>
-                <li><a href="algorithm3.html" target="_blank">FCFS</a></li>
-                <li><a href="algorithm4.html" target="_blank">Optimal Page Replacement</a></li>
-              </ul>
-            </nav>
-          </header>
-        <link rel="stylesheet" type="text/css" href="read_more.css">
-        <link rel="stylesheet" href="animation.css">
-            <h1><u>Documentation</u></h1>
-    
-        </section>
-    
-    
-    
-        <section class="container_docs" >
-            <h1>What is CPU Scheduling?</h1>
-            <p>CPU Scheduling is a process of determining which process will own CPU for execution while another process is
-                on hold. The main task of CPU scheduling is to make sure that whenever the CPU remains idle, the OS at least
-                select one of the processes available in the ready queue for execution. The selection process will be
-                carried out by the CPU scheduler. It selects one of the processes in memory that are ready for execution.
-            </p>
-        </section>
-    
-        <section class="container_docs" data-aos="zoom-in-up">
-            <h1>Why CPU Scheduling?</h1>
-            <p>A typical process involves both I/O time and CPU time. In a uni programming system like MS-DOS, time spent
-                waiting for I/O is wasted and CPU is free during this time. In multi programming systems, one process can
-                use CPU while another is waiting for I/O. This is possible only with process scheduling.<br><br>
-                <strong>Objectives of Process Scheduling Algorithm</strong>
-                <li>Max CPU utilization [Keep CPU as busy as possible]</li>
-                <li>Fair allocation of CPU.</li>
-                <li>Max throughput [Number of processes that complete their execution per time unit]</li>
-                <li>Min turnaround time [Time taken by a process to finish execution]</li>
-                <li>Min waiting time [Time a process waits in ready queue]</li>
-                <li>Min response time [Time when a process produces first response]</li>
-    
-            </p>
-        </section>
-    
-        <section class="container_docs special" data-aos="zoom-in-up">
-            <h1>Important CPU scheduling Terminologies</h1>
-            <!-- <p>A typical process involves both I/O time and CPU time. In a uni programming system like MS-DOS, time spent waiting for I/O is wasted and CPU is free during this time. In multi programming systems, one process can use CPU while another is waiting for I/O. This is possible only with process scheduling.<br><br> -->
-            <li><strong>Burst Time/Execution Time:</strong> It is a time required by the process to complete execution. It
-                is also called running time.</li>
-            <li><strong>Arrival Time:</strong> when a process enters in a ready state</li>
-            <li><strong>Finish Time:</strong> when process complete and exit from a system</li>
-            <li><strong>Multiprogramming:</strong> A number of programs which can be present in memory at the same time.
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="read_more.css">
+
+    <title>OS Documentation</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="logo">OPERATING SYSTEM PROJECT</h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="main.html">Home</a></li>
+                <li><a href="read_more.html">Documentation</a></li>
+                <!-- <li><a href="simulators.html" target="_blank">Simulators</a></li> -->
+                <li class="dropdown">
+                    <a href="simulator.html" class="dropbtn">Simulators</a>
+                    <div class="dropdown-content">
+                        <a href="priority_preemptive.html">Priority Preemptive</a>
+                        <a href="fcfs_disk_scheduling.html">FCFS Disk Scheduling</a>
+                        <a href="petersons.html">Peterson's Solution</a>
+                        <a href="optimal_page_replacement.html">Optimal Page Replacement</a>
+                    </div>
+                </li>
+                <li><a href="team.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="container_docs">
+        <h1>Overview of CPU Scheduling Algorithms</h1>
+        <p>CPU scheduling algorithms are used by the operating system to determine which process should be executed
+            next. The goal of these algorithms is to improve system performance, minimize response time, and ensure
+            fairness. <br> <br>
+
+            There are several factors that need to be taken into account when scheduling CPU time for processes. These
+            include the priority of the process, the time required for the process to complete its task, the amount of
+            CPU time already used by the process, and the amount of time the process has spent waiting for input or
+            output operations. <br> <br>
+
+            Different CPU scheduling algorithms use different techniques to determine which process should be executed
+            next. Some algorithms prioritize processes based on their importance, while others prioritize processes
+            based on their execution time. Some algorithms use a fixed time slice for each process, while others
+            dynamically allocate time slices based on the requirements of the processes in the system. <br> <br>
+
+            In general, the goal of all CPU scheduling algorithms is to maximize system efficiency and provide the best
+            possible user experience by ensuring that processes are executed in a timely and efficient manner.
+        </p>
+    </section>
+
+  
+
+    <section class="container_docs" data-aos="zoom-in-up">
+        <h1>Types of CPU Scheduling Algorithms</h1>
+        <!-- <p>A typical process involves both I/O time and CPU time. In a uni programming system like MS-DOS, time spent
+            waiting for I/O is wasted and CPU is free during this time. In multi programming systems, one process can
+            use CPU while another is waiting for I/O. This is possible only with process scheduling.<br><br>
+            <strong>Objectives of Process Scheduling Algorithm</strong> -->
+        <ul>
+            <li>First-Come, First-Served (FCFS): This algorithm schedules processes in the order they arrive in the
+                ready queue. The first process in the queue gets to use the CPU until it completes or gets blocked.</li>
+            <li>Shortest Job First (SJF): This algorithm schedules the process with the shortest burst time next,
+                ensuring that the shortest job is completed first. This algorithm is known to be optimal, but it
+                requires knowledge of the burst time of each process in advance.</li>
+            <li>Priority Scheduling: This algorithm assigns priorities to each process based on its importance or
+                resource requirements. The higher priority process gets to use the CPU first, and lower priority
+                processes have to wait.</li>
+            <li>Round Robin (RR): This algorithm allocates a fixed time slice to each process in the ready queue, and
+                processes are scheduled in a circular manner. If a process has not completed its work during its time
+                slice, it is preempted, and the next process gets a chance to execute</li>
+        </ul>
+        </p>
+    </section>
+
+    <section class="container_docs">
+        <h1>Overview of Disk Scheduling Algorithms</h1>
+        <p>Disk scheduling algorithms are used by the operating system to manage the access of the disk by multiple
+            processes. The goal of these algorithms is to minimize disk access time, increase system throughput, and
+            ensure fairness.
+            <br><br>
+            Disk scheduling algorithms take into account the physical characteristics of the disk, including its
+            rotational speed, seek time, and transfer rate, as well as the location of data on the disk. Different disk
+            scheduling algorithms use different techniques to determine which process should be given access to the disk
+            next.
+        </p>
+    </section>
+
+    <section class="container_docs" data-aos="zoom-in-up">
+        <h1>Types of Disk Scheduling Algorithms</h1>
+        <!-- <p>A typical process involves both I/O time and CPU time. In a uni programming system like MS-DOS, time spent
+            waiting for I/O is wasted and CPU is free during this time. In multi programming systems, one process can
+            use CPU while another is waiting for I/O. This is possible only with process scheduling.<br><br>
+            <strong>Objectives of Process Scheduling Algorithm</strong> -->
+        <ul>
+            <li>First-Come, First-Served (FCFS): This algorithm serves requests in the order they arrive in the queue.
+                The first request in the queue is served first, regardless of its location on the disk.</li>
+            <li>Shortest Seek Time First (SSTF): This algorithm serves the request that is closest to the current
+                position of the disk head, minimizing the seek time required to access the data.</li>
+            <li>SCAN: This algorithm moves the disk head in one direction, serving all requests in that direction until
+                there are no more requests in that direction, then reverses direction and serves all requests in the
+                other direction.</li>
+            <li>C-SCAN: This algorithm is similar to SCAN but always moves the disk head in one direction, serving
+                requests in that direction and wrapping around to the beginning of the disk when the end is reached.
             </li>
-            <li><strong>Jobs:</strong> It is a type of program without any kind of user interaction.</li>
-            <li><strong>User:</strong> It is a kind of program having user interaction.</li>
-            <li><strong>Process:</strong> It is the reference that is used for both job and user.</li>
-            <li><strong>CPU/IO burst cycle:</strong> Characterizes process execution, which alternates between CPU and I/O
-                activity. CPU times are shorter than the time of I/O.</li>
-    
-            </p>
-        </section>
-        <section class="container_docs" data-aos="zoom-in-up">
-            <h1>Types of CPU Scheduling</h1>
-            <p>There is mainly two major types of CPU Scheduling which is listed below.There is sub-types of this algorithm also. we have discussed all algorithm in details below. </p>
-            <li>Preemptive Algorithm</li>
-            <li>Non Preemptive Algorithm</li>
-            <br>
-    
-            <p><strong class="bold">Preemptive Scheduling</strong><br><br>
-                In Preemptive Scheduling, the tasks are mostly assigned with their priorities. Sometimes it is important to
-                run a task with a higher priority before another lower priority task, even if the lower priority task is
-                still running. The lower priority task holds for some time and resumes when the higher priority task
-                finishes its execution.<br><br>
-                <br>
-                <strong class="bold">Non-Preemptive Scheduling</strong><br><br>
-                In this type of scheduling method, the CPU has been allocated to a specific process. The process that keeps
-                the CPU busy will release the CPU either by switching context or terminating. It is the only method that can
-                be used for various hardware platforms. That’s because it doesn’t need special hardware (for example, a
-                timer) like preemptive scheduling.
-            </p>
-    
-            
-    
-        </section>
+            <li>LOOK: This algorithm is similar to SCAN but only serves requests that are in the same direction as the
+                disk head, reducing the average seek time.</li>
+        </ul>
+        </p>
+    </section>
+
+    </p>
+    </section>
+</body>
+
 </html>
