@@ -1,35 +1,78 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Priority Preemptive Scheduler Simulator</title>
-	<link rel="stylesheet" href="style_pri_pre.css">
+	<link rel="stylesheet" href="algorithm1.css">
+	<link rel="stylesheet" href="animation.css">
 </head>
+
 <body>
-	<h1>Priority Preemptive Scheduler Simulator</h1>
-	<div>
-		<label for="process-count">Number of Processes:</label>
-		<input type="number" id="process-count" min="1" max="10" value="5">
-		<button onclick="generateInputs()">Generate Inputs</button>
-	</div>
-	<div id="inputs-container"></div>
-	<button onclick="simulate()">Simulate</button>
-	<h2>Results</h2>
-	<table>
-		<thead>
-			<tr>
-				<th>Process</th>
-				<th>Arrival Time</th>
-				<th>Burst Time</th>
-				<th>Priority</th>
-				<th>Turnaround Time</th>
-				<th>Waiting Time</th>
-			</tr>
-		</thead>
-		<tbody id="results-container">
-		</tbody>
-	</table>
-	<h2>Gantt Chart</h2>
-	<div id="gantt-container"></div>
-	<script src="script_pri_pre.js"></script>
+	<header>
+		<h1 class="logo">OPERATING SYSTEM PROJECT</h1>
+		<nav>
+			<ul class="nav-links">
+				<li><a href="main.html">Home</a></li>
+				<li><a href="read_more.html">Documentation</a></li>
+				<!-- <li><a href="simulators.html" target="_blank">Simulators</a></li> -->
+				<li class="dropdown">
+					<a href="simulator.html" class="dropbtn">Simulators</a>
+					<div class="dropdown-content">
+						<!-- <a href="priority_preemptive.html">Priority Preemptive</a> -->
+						<a href="fcfs_disk_scheduling.html">FCFS Disk Scheduling</a>
+						<a href="petersons.html">Peterson's Solution</a>
+						<a href="optimal_page_replacement.html">Optimal Page Replacement</a>
+					</div>
+				</li>
+				<li><a href="team.html">About Us</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<section class="container_docs" data-aos="zoom-in-up">
+		<h1>What is Priority Preemptive Scheduling Algorithm</h1>
+		<p>Priority preemptive scheduling is a CPU scheduling algorithm where processes with higher priority are given
+			preference over processes with lower priority. The CPU can preempt a running process if a higher priority
+			process becomes available, allowing for better response time and throughput for high-priority tasks. The
+			algorithm assigns each process a priority value, which is typically an integer number. The processes with
+			higher priority values are given CPU time first, and if a higher priority process becomes available, the
+			currently running process is preempted and replaced with the higher priority process.<br>
+		</p>
+
+		<h4>
+			<li>Advantages of Priority Preemptive Scheduling Algorithm</li>
+		</h4>
+		<p>High priority tasks are completed faster: The priority preemptive scheduling algorithm ensures that
+			high-priority tasks are given preference over lower-priority tasks. This helps to complete high-priority
+			tasks faster and with better response time. <br><br>
+
+			Improved system performance: The algorithm allows for better system performance as high-priority tasks are
+			given priority over low-priority tasks. This results in better resource utilization and improved overall
+			system performance. <br><br>
+
+			Flexibility in priority assignment: Priority values can be dynamically adjusted based on the needs of the
+			system. This allows for greater flexibility in managing the system and responding to changing
+			demands.<br><br></p>
+
+		<h4>
+			<li>Disadvantages of Priority Preemptive Scheduling Algorithm</li>
+		</h4>
+		<p>Low-priority tasks may suffer: If a large number of high-priority tasks are present in the system,
+			low-priority tasks may suffer from starvation, resulting in increased waiting time and reduced system
+			performance. <br><br>
+
+			Risk of priority inversion: Priority inversion occurs when a low-priority task holds a resource that a
+			high-priority task needs, resulting in reduced performance. The priority preemptive scheduling algorithm is
+			susceptible to priority inversion, which can lead to reduced system performance. <br><br>
+
+			Difficulty in assigning priority values: Assigning priority values to processes can be challenging,
+			especially in large systems with many processes. It requires careful consideration of the importance of each
+			process and the potential impact on the system if a process is given too high or too low a priority.
+
+		</p>
+
+		<br>
+	</section>
 </body>
+
 </html>

@@ -1,21 +1,25 @@
-/* CSS for the entire page */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@600&display=swap');
+/* General styles */
 
 
 body {
     font-family:  'Raleway', sans-serif;
-    background: linear-gradient(to right, #3c92a780, #0b44489c );
+    background: linear-gradient(to right, #3c92a7b0, #0b44489c );
+    text-align: center;
   }
   
-  h1 {
+  /* h1 {
     text-align: center;
     margin-top: 50px;
     margin-bottom: 50px;
     color: #333;
     font-weight: bolder;
     font-size: 40px;
-  }
+  } */
   
   /* CSS for the process sections */
   
@@ -97,111 +101,90 @@ opacity: 1;
 transform: translateY(0);
 }
 }
+  
+  /* Header styles */
+  
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-left: 20px;
+	border-bottom: 2px solid #0f5667;
+	font-family: 'Alkatra', cursive;
+	color: #0e3637;
+  }
+  
+  .logo {
+	font-size: 30px;
+	font-weight:bolder;
+	border-bottom:  solid #0e3637;
+	padding-bottom: 3px;
+  }
+  
+.nav-links {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bolder;
+	display:flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+  }
+  
+  .nav-links li {
+	
+	margin-right: 20px;
+	
+  }
+  
+  .nav-links li:last-child {
+	margin-right: 10;
+	
+  }
+  
+  .nav-links a {
+	display:inline-flex;
+	padding: 1rem;
+	color: #031e26;
+	text-decoration: none;
+	transition: all 0.5s ease;
+  }
+  
+  .nav-links a:hover {
+	background-color: #ffffff;
+	color: rgb(19, 31, 45);
+  }
 
-.container_docs{
-    border: 2px solid black; 
-    height: auto;
-    padding-top:50px;
-    text-align: center;
-    background-color: rgba(47, 162, 204, 0.568);
-    border-radius: 20px;
-    width: 80%;
-    margin-left:auto;
-    margin-right: auto;
-    margin-top: 50px;
-    margin-bottom: 10px;
-    font-family: 'Poppins', sans-serif;
-    background-color: rgba(255, 255, 255, 0.568);
-    font-weight: bolder;
+   /* Style the dropdown button */
+.dropbtn {
+	display: inline-block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	border: none;
   }
   
-  .container_docs h1{
-    font-size: 36px;
-    margin-top: 10px;
-    font-weight: 600;
+  /* Style the dropdown content */
+  .dropdown-content {
+	display: none;
+	position: absolute;
+	z-index: 1;
   }
   
-  .container_docs p{
-    margin-left: 10px;
-    margin-right: 10px;
-    text-align: left;
-    margin-top: 15px;
-    font-size: 20px;
-    padding-bottom: 50px;
-    line-height : 30px;
+  .dropdown-content a {
+	color: rgb(231, 242, 244);
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
   }
   
-  .container_docs li{
-    text-align: left;
-    line-height: normal;
-    margin-left: 15px;
-    font-size:20px ;
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+	display: block;
   }
   
-  .special li{
-    margin-left: 10px;
-    margin-right: 10px;
-    line-height: 25px;
-    padding-top: 20px;
+  /* Change the background color of the dropdown menu links on hover */
+  .dropdown-content a:hover {
+	background-color: #b1dee9;
   }
   
-  .container_docs blod{
-    font-weight: 900;
-  }
-  
-  .container_docs:hover{
-    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.644);
-    transition: 0.3s;
-  }
-  
-  header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0px 20px;
-      border-bottom: 5px solid #000000;
-      font-family: 'Raleway', sans-serif;
-      color: #0c0c0c;
-    }
-    
-    .logo {
-      font-size: 30px;
-      font-weight:900;
-      border-bottom:  solid #000000;
-      padding-bottom: 5px;
-    }
-    
-    .nav-links {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: bolder;
-      
-      display:flex;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    
-    .nav-links li {
-      
-      margin-right: 20px;
-      
-    }
-    
-    .nav-links li:last-child {
-      margin-right: 10;
-      
-    }
-    
-    .nav-links a {
-      display:inline-flex;
-      padding: 5px;
-      border-radius: 60%;
-      color: #0c0d0d;
-      text-decoration:solid;
-      transition: background-color 0.3s ease;
-    }
-    
-    .nav-links a:hover {
-      background-color: #1c1919;
-      color: rgb(200, 203, 206);
-    }

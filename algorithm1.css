@@ -6,141 +6,81 @@
 /* General styles */
 
 /* Fonts */
+
+/* Background */
+body {
+    background: linear-gradient(to right, #3c92a7, #08383b );
+  }
+  
 body {
   font-family: 'Raleway', sans-serif;
   text-align: center;
 }
 
-/* Background */
-body {
-  background: linear-gradient(to right, #3c92a780, #0b44489c);
-}
-
-/* Center content */
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-/* Inputs */
-input[type=number] {
-  width: 4em;
-  border-radius: 0.5em;
-  padding: 0.5em;
-  border: none;
-  background-color: #f2f2f2;
-  margin-bottom: 1em;
-}
-
-/* Buttons */
-button {
-  padding: 0.5em 1em;
-  font-size: 1em;
-  border: none;
-  border-radius: 0.5em;
-  margin: 1em;
-  cursor: pointer;
-  color: #fff;
-  background-color: #0f4556;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-}
-
-button:hover {
-  background-color: #146078;
+.container_docs{
+    border: 2px solid black; 
+    height: auto;
+    padding-top:50px;
+    text-align: center;
+    background-color: rgba(47, 162, 204, 0.568);
+    border-radius: 20px;
+    width: 80%;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgba(255, 255, 255, 0.568);
+    font-weight: bolder;
+  }
   
-}
-
-
-/* Result Table */
-table {
-  width: 80%;
-  margin: 0 auto;
-  border-collapse: collapse;
-  text-align: center;
-  border: 1px solid #0f4556;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-  background-color: #fff;
-}
-
-th, td {
-  padding: 0.8em;
-  border: 1px solid black;
-}
-
-th {
-  background-color: #0f4556;
+  .container_docs h1{
+    font-size: 36px;
+    margin-top: 10px;
+    font-weight: 600;
+  }
   
-  color: #fff;
-}
-
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-tr:nth-child(odd) {
-  background-color: #e0e0e0;
-}
-
-
-/* Gantt Chart */
-#gantt-container {
-  width: 80%;
-  margin: 0 auto;
-  height: 50px;
-  border: 1px solid black;
-  display: flex;
-}
-
-.gantt-bar {
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-}
-
-.gantt-bar div {
-  flex: 1;
-  height: 100%;
-}
-
-.gantt-bar div:first-child {
-  border-left: 1px solid black;
-}
-
-.gantt-bar div:last-child {
-  border-right: 1px solid black;
-}
-
-/* Colors for Gantt Chart */
-.gantt-bar div.color1 {
-  background-color: #f44336;
-}
-
-.gantt-bar div.color2 {
-  background-color: #9c27b0;
-}
-
-.gantt-bar div.color3 {
-  background-color: #3f51b5;
-}
-
-.gantt-bar div.color4 {
-  background-color: #4caf50;
-}
-
-.gantt-bar div.color5 {
-  background-color: #ffeb3b;
-}
-
-
-/* Header styles */
+  .container_docs p{
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: left;
+    margin-top: 15px;
+    font-size: 20px;
+    padding-bottom: 50px;
+    line-height : 30px;
+  }
   
-header {
+  .container_docs li{
+    text-align: left;
+    line-height: normal;
+    margin-left: 15px;
+    font-size:20px ;
+  }
+  
+  .special li{
+    margin-left: 10px;
+    margin-right: 10px;
+    line-height: 25px;
+    padding-top: 20px;
+  }
+  
+  .container_docs blod{
+    font-weight: 900;
+  }
+  
+  .container_docs:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.644);
+    transition: 0.3s;
+  }
+
+   /* Header styles */
+  
+  header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding-left: 20px;
-	border-bottom: 2px solid #0f5667;
+	border-bottom: 2px solid #ccc;
 	font-family: 'Alkatra', cursive;
 	color: #0e3637;
   }
@@ -175,7 +115,7 @@ header {
   .nav-links a {
 	display:inline-flex;
 	padding: 1rem;
-	color: #031e26;
+	color: #bfc9cc;
 	text-decoration: none;
 	transition: all 0.5s ease;
   }

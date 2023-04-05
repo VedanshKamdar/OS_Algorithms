@@ -3,23 +3,34 @@
 
 <head>
   <title>Peterson's Solution Simulator</title>
-  <link rel="stylesheet" href="style_peters.css">
+  <link rel="stylesheet" href="algorithm2.css">
   <link rel="stylesheet" href="animation.css">
   
 </head>
 
 <body>
+
   <header>
     <h1 class="logo">OPERATING SYSTEM PROJECT</h1>
     <nav>
       <ul class="nav-links">
-        <li><a href="main.html" target="_blank">Home</a></li>
-        <li><a href="algorithm1.html" target="_blank">Priority Preemptive</a></li>
-        <li><a href="algorithm3.html" target="_blank">FCFS Disk Scheduling</a></li>
-        <li><a href="algorithm4.html" target="_blank">Optimal Page Replacement</a></li>
+        <li><a href="main.html">Home</a></li>
+        <li><a href="read_more.html">Documentation</a></li>
+        <!-- <li><a href="simulators.html" target="_blank">Simulators</a></li> -->
+        <li class="dropdown">
+          <a href="simulator.html" class="dropbtn">Simulators</a>
+          <div class="dropdown-content">
+            <!-- <a href="priority_preemptive.html">Priority Preemptive</a> -->
+            <a href="fcfs_disk_scheduling.html">FCFS Disk Scheduling</a>
+            <a href="petersons.html">Peterson's Solution</a>
+            <a href="optimal_page_replacement.html">Optimal Page Replacement</a>
+          </div>
+        </li>
+        <li><a href="team.html">About Us</a></li>
       </ul>
     </nav>
   </header>
+
   <section class="container_docs" data-aos="zoom-in-up">
     <h1>What is Peterson's Solution</h1>
     <p>Peterson's solution is a software-based algorithm that prevents conflicts in concurrent programs by ensuring
@@ -51,21 +62,7 @@
 
     <br>
   </section>
-  <h1>Peterson's Solution Simulator</h1>
-  <div id="process1" class="process">
-    <h2>Process 1</h2>
-    <button id="p1" class="button">Start</button>
-  </div>
-  <div id="process2" class="process">
-    <h2>Process 2</h2>
-    <button id="p2" class="button">Start</button>
-  </div>
-  <div id="process3" class="process">
-    <h2>Process 3</h2>
-    <button id="p3" class="button">Start</button>
-  </div>
-  <div id="log"></div>
-  <script src="script_peters.js"></script>
+  
   
   
 </body>
