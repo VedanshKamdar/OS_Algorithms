@@ -190,3 +190,7 @@ body {
 	}
   }
   
+  .nav-links li:not(:last-child) {
+    border-right: 2px solid rgb(225, 239, 243);
+    padding-right: 10px;
+  }
