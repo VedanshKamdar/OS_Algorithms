@@ -125,7 +125,7 @@ body {
 	color: rgb(19, 31, 45);
   }
 
-   /* Style the dropdown button */
+  /* Style the dropdown button */
 .dropbtn {
 	display: inline-block;
 	color: white;
@@ -137,9 +137,13 @@ body {
   
   /* Style the dropdown content */
   .dropdown-content {
+	text-align: center;
 	display: none;
 	position: absolute;
 	z-index: 1;
+	background: linear-gradient(to top, #3c92a7e6, #08383be3 ); /* Change the background color of the menu to a gradient */
+
+	transition: all 0.3s ease-in-out; /* Add a transition effect to the menu */
   }
   
   .dropdown-content a {
@@ -147,6 +151,7 @@ body {
 	padding: 12px 16px;
 	text-decoration: none;
 	display: block;
+	font-size: 16px; /* Change the font size of the menu items */
   }
   
   /* Show the dropdown menu on hover */
@@ -159,3 +164,30 @@ body {
 	background-color: #b1dee9;
   }
   
+  /* Add a hover effect to the dropdown button */
+  .dropbtn:hover {
+	background-color: #1abc9c;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 600px) {
+	.dropdown-content {
+	  position: relative;
+	  background: #f9f9f9;
+	  box-shadow: none;
+	}
+	
+	.dropdown-content a {
+	  color: #000;
+	  font-size: 14px;
+	}
+	
+	.dropdown:hover .dropdown-content {
+	  display: block;
+	}
+  }
+  
+  .nav-links li:not(:last-child) {
+    border-right: 2px solid rgb(225, 239, 243);
+    padding-right: 10px;
+  }
