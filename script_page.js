@@ -64,7 +64,7 @@ function runOptimalPageReplacement() {
   function findOptimal(frames, nextUse, numFrames, pages, currentIndex, numPages) {
     let index = -1;
     let farthest = -1;
-    for (let i = 0; i < numFrames; i++) {
+    for (let i = 0; i < numFrames+1; i++) {
       let found = false;
       for (let j = currentIndex + 1; j < numPages; j++) {
         if (frames[i] == pages[j]) {
