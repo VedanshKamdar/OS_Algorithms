@@ -8,7 +8,7 @@
 
 body {
     font-family:  'Raleway', sans-serif;
-    background: linear-gradient(to right, #3c92a7b0, #0b44489c );
+    background: linear-gradient(to right, #3c92a7, #a1dde2 , #3c92a7);
     text-align: center;
   }
   
@@ -24,7 +24,7 @@ body {
   /* CSS for the process sections */
   
   .process {
-    background-color: #097a7a;
+    background: linear-gradient(to bottom, #072b34, #0a484d, #072b34 );
     padding: 20px;
     margin: 20px;
     box-shadow: 0 5px 10px  #1f26268e;
@@ -104,20 +104,22 @@ transform: translateY(0);
   
   /* Header styles */
   
-header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding-left: 20px;
-	border-bottom: 2px solid #0f5667;
-	font-family: 'Alkatra', cursive;
-	color: #0e3637;
+  header {
+    border-radius: 10px;
+    background: linear-gradient(to bottom, #072b34, #0a484d, #072b34 );
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    border-bottom: 2px solid #ccc;
+    font-family: 'Alkatra', cursive;
+    color: #ffffff;
   }
   
   .logo {
 	font-size: 30px;
 	font-weight:bolder;
-	border-bottom:  solid #0e3637;
+	border-bottom:  solid #ffffff;
 	padding-bottom: 3px;
   }
   
@@ -144,7 +146,7 @@ header {
   .nav-links a {
 	display:inline-flex;
 	padding: 1rem;
-	color: #031e26;
+	color: #ffffff;
 	text-decoration: none;
 	transition: all 0.5s ease;
   }

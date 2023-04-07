@@ -9,7 +9,7 @@
 
 /* Background */
 body {
-    background: linear-gradient(to right, #3c92a7, #08383b );
+    background: linear-gradient(to right, #3c92a7, #a1dde2 , #3c92a7);
 	justify-content: center;
   }
   
@@ -121,20 +121,22 @@ body {
 
   /* Header styles */
   
- header {
+  header {
+	border-radius: 10px;
+	background: linear-gradient(to bottom, #072b34, #0a484d, #072b34 );
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding-left: 20px;
 	border-bottom: 2px solid #ccc;
 	font-family: 'Alkatra', cursive;
-	color: #0e3637;
+	color: #ffffff;
   }
   
   .logo {
 	font-size: 30px;
 	font-weight:bolder;
-	border-bottom:  solid #0e3637;
+	border-bottom:  solid #ffffff;
 	padding-bottom: 3px;
   }
   

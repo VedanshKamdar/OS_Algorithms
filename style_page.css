@@ -8,7 +8,7 @@
 
 body {
     font-family:  'Raleway', sans-serif;
-    background: linear-gradient(to right, #3c92a7b0, #0b44489c );
+    background: linear-gradient(to right, #3c92a7, #a1dde2 , #3c92a7);
     text-align: center;
   }
 
@@ -22,47 +22,53 @@ label{
     margin: 0 auto;
   }
   
-  /* Style the page title */
-  h1 {
-    color: #333;
-    text-align: center;
-    margin-top: 30px;
+  /* Profile card styling */
+  .profile-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+    display: inline-block;
+    margin: 20px;
+    max-width: 500px;
+    padding: 20px;
+    text-align: center; /* center align content */
+    transition: transform 0.2s ease-out; /* add transition on hover */
   }
-  h2{
-    text-align: center;
-    /* border: 1px solid black; */
+  .profile-card:hover {
+    transform: scale(1.05); /* zoom in on hover */
   }
-  /* Style the input fields and button */
-  input[type="text"],
-  input[type="number"],
-  button {
-    display: flexbox;
-    margin: 10px auto;
+  .profile-card h1 {
+    color: #0e383e;
+    font-size: 30px;
+    font-weight: bolder;
+    margin-top: 0;
+  }
+  .profile-card label {
+    color: #555;
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .profile-card input {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+    margin-bottom: 10px;
     padding: 10px;
+    width: 95%;
+  }
+  .profile-card button {
+    background-color: #12333e;
     border: none;
     border-radius: 3px;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-  }
-  
-  input[type="text"],
-  input[type="number"] {
-    width: 80%;
-    max-width: 400px;
-  }
-  .box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* justify-content: center; */
-    height: 200px;
-    /* border: 1px solid black; */
-    width: auto;
-  }  
-  button {
-    font-size: 20px;
-    background-color: #163947;
     color: #fff;
     cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+  .profile-card button:hover {
+    background-color: #555;
   }
   
   /* Style the output table */
@@ -164,19 +170,22 @@ label{
  /* Header styles */
   
  header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding-left: 20px;
-	border-bottom: 2px solid #ccc;
-	font-family: 'Alkatra', cursive;
-	color: #0e3637;
-  }
+  border-radius: 10px;
+  background: linear-gradient(to bottom, #072b34, #0a484d, #072b34 );
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  border-bottom: 2px solid #ccc;
+  font-family: 'Alkatra', cursive;
+  color: #ffffff;
+}
   
   .logo {
+  color: white;
 	font-size: 30px;
 	font-weight:bolder;
-	border-bottom:  solid #0e3637;
+	border-bottom:  solid #ffffff;
 	padding-bottom: 3px;
   }
   
@@ -203,7 +212,7 @@ label{
   .nav-links a {
 	display:inline-flex;
 	padding: 1rem;
-	color: #bfc9cc;
+	color: #ffffff;
 	text-decoration: none;
 	transition: all 0.5s ease;
   }
