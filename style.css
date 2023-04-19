@@ -132,6 +132,8 @@ body {
 	font-size: 4rem;
 	font-weight: bolder;
 	margin-top: 2.5rem;
+	transform: translateY(-50%);
+    animation: slideDown 1.2s ease infinite;
   }
   
   .text-box p {
@@ -231,4 +233,16 @@ body {
   .nav-links li:not(:last-child) {
 	border-right: 2px solid rgb(225, 239, 243);
 	padding-right: 10px;
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-50%);
+    }
+    50% {
+        transform: translateY(-45%);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
 }
