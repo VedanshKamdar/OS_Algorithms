@@ -79,6 +79,11 @@
 
     <br>
   </section>
+  <div class="prompt">
+    <button id="prompt-button">
+      <img src="quiz.jpg" alt="Chatbot Icon">
+    </button>
+  </div>
   <!-- <h1>FCFS Disk Scheduling Algorithm</h1>
 
   <label for="queue">Enter the disk request queue:</label>
@@ -99,6 +104,14 @@
 
   <script src="script_disk.js"></script>
   <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script> -->
+  <script>
+    const promptButton = document.getElementById("prompt-button");
+
+promptButton.addEventListener("click", function() {
+  window.location.href = "quiz.html";
+});
+
+  </script>
 </body>
 
 </html>

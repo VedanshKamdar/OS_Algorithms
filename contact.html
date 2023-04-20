@@ -44,6 +44,11 @@
             <button type="submit">Send</button>
         </form>
     </div>
+    <div class="prompt">
+        <button id="prompt-button">
+          <img src="quiz.jpg" alt="Chatbot Icon">
+        </button>
+      </div>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
         function sendEmail() {
@@ -57,6 +62,13 @@
                 message => alert("Message Sent Succesfully! Thankyou :)")
             );
         }
+
+        const promptButton = document.getElementById("prompt-button");
+
+promptButton.addEventListener("click", function() {
+  window.location.href = "quiz.html";
+});
+
     </script>
 </body>
 

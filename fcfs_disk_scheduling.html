@@ -40,6 +40,8 @@
   <input type="text" id="queue" placeholder="e.g. 98,183,37,122,14,124,65,67">
 
   <button onclick="simulate()">Simulate</button>
+  <p id="seek-time"></p>
+
 
   <table>
     <thead>
@@ -51,7 +53,11 @@
     </thead>
     <tbody id="output-body"></tbody>
   </table>
-
+  <div class="prompt">
+    <button id="prompt-button">
+      <img src="quiz.jpg" alt="Chatbot Icon">
+    </button>
+  </div>
   <script src="script_disk.js"></script>
   <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
 </body>

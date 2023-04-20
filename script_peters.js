@@ -40,3 +40,9 @@ document.getElementById("p2").addEventListener("click", async function() {
 document.getElementById("p3").addEventListener("click", async function() {
   await process(2);
 });
+
+const promptButton = document.getElementById("prompt-button");
+
+promptButton.addEventListener("click", function() {
+  window.location.href = "quiz.html";
+});

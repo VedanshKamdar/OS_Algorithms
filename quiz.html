@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_quiz.css">
+    <link rel="stylesheet" href="animation.css">
+    <title>Quiz</title>
+</head>
+<body>
+    <header>
+        <h2 class="logo">OPERATING SYSTEM PROJECT</h2>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="read_more.html">Documentation</a></li>
+                <!-- <li><a href="simulators.html" target="_blank">Simulators</a></li> -->
+                <li class="dropdown">
+                    <a href="simulator.html" class="dropbtn">Simulators</a>
+                    <div class="dropdown-content">
+                        <a href="priority_preemptive.html">Priority Preemptive</a>
+                        <a href="fcfs_disk_scheduling.html">FCFS Disk Scheduling</a>
+                        <a href="petersons.html">Peterson's Solution</a>
+                        <a href="optimal_page_replacement.html">Optimal Page Replacement</a>
+                    </div>
+                </li>
+                <li><a href="team.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="quiz-container">
+        <h1>Multiple Choice Quiz</h1>
+      <p>Select one option for each question and click submit to see your result.</p>
+      <form id="quiz-form">
+        <h3>Question 1: What is a responsive website?</h3>
+        <label><input type="radio" name="q1" value="a">a) A website that can respond to user inputs</label>
+        <label><input type="radio" name="q1" value="b">b) A website that can display on any device</label>
+        <label><input type="radio" name="q1" value="c">c) A Website that loads quickly</label>
+        <label><input type="radio" name="q1" value="c">d) A Website with dynamic content</label>
+        <br><br>
+        <!-- answer is b -->
+        <h3>Question 2: Which of the following scheduling algorithms is a variant of FCFS disk scheduling?</h3>
+        <label><input type="radio" name="q2" value="a">a) Shortest-Seek-Time-First (SSTF)</label>
+        <label><input type="radio" name="q2" value="b">b) C-SCAN</label>
+        <label><input type="radio" name="q2" value="c">c) LOOK</label>
+        <label><input type="radio" name="q2" value="c">d) SCAN</label>
+        <br><br>
+        <!-- answer is c -->
+        <h3>Question 3: What is the main goal of page replacement algorithms?</h3>
+        <label><input type="radio" name="q3" value="a">a) To reduce the number of page faults.</label>
+        <label><input type="radio" name="q3" value="b">b) To increase the number of page faults</label>
+        <label><input type="radio" name="q3" value="c">c) To increase the meory utilization</label>
+        <label><input type="radio" name="q3" value="c">d) To reduce the CPU utilization</label>
+        <br><br>
+        <!-- answer is a -->
+        <h3>Question 4: Which of the following statements is true about preemptive priority scheduling?</h3>
+        <label><input type="radio" name="q4" value="a">a) Processes are scheduled in a round-robin fashion.</label>
+        <label><input type="radio" name="q4" value="b">b) The lowest priority process is scheduled first.</label>
+        <label><input type="radio" name="q4" value="c">c) The priority of a process cannot be changed once it has been assigned.</label>
+        <label><input type="radio" name="q4" value="c">d) The highest priority process is scheduled first.</label>
+        <br><br>
+        <!-- answer is d -->
+        <h3>Question 5: What problem does Peterson's solution solve?</h3>
+        <label><input type="radio" name="q5" value="a">a) Starvation</label>
+        <label><input type="radio" name="q5" value="b">b) Deadlock</label>
+        <label><input type="radio" name="q5" value="c">c) Mutual Exclusion</label>
+        <label><input type="radio" name="q5" value="c">d) Priority Inversion</label>
+        <br><br>
+        <!-- answer is c -->
+        <h3>Question 6: What is the purpose of JavaScript?</h3>
+        <label><input type="radio" name="q6" value="a">a) To style web pages</label>
+        <label><input type="radio" name="q6" value="b">b) To add interactivity to web pages</label>
+        <label><input type="radio" name="q6" value="c">c) To create databases</label>
+        <label><input type="radio" name="q6" value="c">d) To edit images</label>
+        <br><br>
+        <!-- answer is b -->
+        <h3>Question 7: Which of the following statements is true about Peterson's solution?</h3>
+        <label><input type="radio" name="q7" value="a">a) It requires all processes to cooperate.</label>
+        <label><input type="radio" name="q7" value="b">b) It can lead to deadlock.</label>
+        <label><input type="radio" name="q7" value="c">c) It cannot be used in multi-processor systems.</label>
+        <label><input type="radio" name="q7" value="c">d) It guarantees progress.</label>
+        <br><br>
+        <!-- answer is d -->
+        <h3>Question 8: In preemptive priority scheduling, if a higher priority process arrives while a lower priority process is currently executing, what happens?</h3>
+        <label><input type="radio" name="q8" value="a">a) The lower priority process continues executing until it finishes.</label>
+        <label><input type="radio" name="q8" value="b">b) The lower priority process is suspended and the higher priority process is scheduled.</label>
+        <label><input type="radio" name="q8" value="c">c) The lower priority process is killed and the higher priority process is scheduled.</label>
+        <label><input type="radio" name="q8" value="c">d) The lower priority process is put on hold and the higher priority process is scheduled.</label>
+        <br><br>
+        <!-- asnwer is b -->
+        <h3>Question 9: What is the main disadvantage of FCFS disk scheduling?</h3>
+        <label><input type="radio" name="q9" value="a">a) It can lead to starvation.</label>
+        <label><input type="radio" name="q9" value="b">b) It does not ensure fairness.</label>
+        <label><input type="radio" name="q9" value="c">c) It is too complex to implement.</label>
+        <label><input type="radio" name="q9" value="c">d) It is not suitable for real-time systems.</label>
+        <br><br>
+        <!-- answer is a -->
+        <h3>Question 10: What does the Optimal Page Replacement Algorithm replace?</h3>
+        <label><input type="radio" name="q10" value="a">a) The page that has been least recently used.</label>
+        <label><input type="radio" name="q10" value="b">b) The page that has been used least frequently.</label>
+        <label><input type="radio" name="q10" value="c">c) The page that will not be used for the longest period of time.</label>
+        <label><input type="radio" name="q10" value="c">d) The page that has the lowest priority.</label>
+        <br><br>
+        <!-- answer is c -->
+        <button type="submit">Submit Quiz</button>
+      </form>
+      
+      <p id="result"></p>
+      <p id="answers"></p>
+      
+    </div>
+    <script src="script_quiz.js"></script>
+</body>
+</html>

@@ -246,3 +246,31 @@ body {
         transform: translateY(-50%);
     }
 }
+
+.prompt {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+  }
+  
+  #prompt-button {
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	cursor: pointer;
+	transition: all 0.2s ease-in-out; /* Added property */
+  }
+  
+  #prompt-button img {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+  }
+
+  #prompt-button:hover {
+	transform: scale(1.2); /* Added selector */
+  }
+  

@@ -165,7 +165,13 @@ function simulate() {
     }
 
     // Display the total seek time
-    alert(`Total Seek Time: ${seekTime}`);
+    // alert(`Total Seek Time: ${seekTime}`);
+
+
+// Display the total seek time
+const seekTimeElement = document.getElementById("seek-time");
+seekTimeElement.textContent = `Total Seek Time: ${seekTime}`;
+
 
     // Draw the disk head movement chart
     const chartContainer = document.createElement("div");
@@ -187,3 +193,9 @@ function simulate() {
         }
     });
 }
+
+const promptButton = document.getElementById("prompt-button");
+
+promptButton.addEventListener("click", function() {
+  window.location.href = "quiz.html";
+});

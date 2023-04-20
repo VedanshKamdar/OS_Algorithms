@@ -1,100 +1,4 @@
-// let processes = [];
 
-// function addProcess() {
-//   const processName = document.getElementById("process-name").value;
-//   const burstTime = parseInt(document.getElementById("burst-time").value);
-//   const priority = parseInt(document.getElementById("priority").value);
-
-//   const process = {
-//     name: processName,
-//     burstTime,
-//     priority,
-//     waitingTime: 0,
-//     turnaroundTime: 0,
-//   };
-
-//   processes.push(process);
-
-//   // clear input fields
-//   document.getElementById("process-name").value = "";
-//   document.getElementById("burst-time").value = "";
-//   document.getElementById("priority").value = "";
-
-//   displayProcesses();
-// }
-
-// function displayProcesses() {
-//   const tableBody = document.getElementById("process-table");
-//   tableBody.innerHTML = "";
-
-//   let totalWaitingTime = 0;
-//   let totalTurnaroundTime = 0;
-
-//   for (let i = 0; i < processes.length; i++) {
-//     const process = processes[i];
-
-//     // calculate waiting time
-//     if (i === 0) {
-//       process.waitingTime = 0;
-//     } else {
-//       let waitingTime = 0;
-//       for (let j = 0; j < i; j++) {
-//         waitingTime += processes[j].burstTime;
-//       }
-//       process.waitingTime = waitingTime;
-//     }
-
-//     // calculate turnaround time
-//     process.turnaroundTime = process.waitingTime + process.burstTime;
-
-//     totalWaitingTime += process.waitingTime;
-//     totalTurnaroundTime += process.turnaroundTime;
-
-//     // add row to the table
-//     const row = tableBody.insertRow();
-//     const nameCell = row.insertCell(0);
-//     const burstTimeCell = row.insertCell(1);
-//     const priorityCell = row.insertCell(2);
-//     const waitingTimeCell = row.insertCell(3);
-//     const turnaroundTimeCell = row.insertCell(4);
-
-//     nameCell.innerText = process.name;
-//     burstTimeCell.innerText = process.burstTime;
-//     priorityCell.innerText = process.priority;
-//     waitingTimeCell.innerText = process.waitingTime;
-//     turnaroundTimeCell.innerText = process.turnaroundTime;
-//   }
-
-//   const avgWaitingTime = totalWaitingTime / processes.length;
-//   const avgTurnaroundTime = totalTurnaroundTime / processes.length;
-//   const resultRow = tableBody.insertRow();
-//   const resultCell = resultRow.insertCell();
-//   resultCell.colSpan = 5;
-//   resultCell.innerHTML = `<strong>Average Waiting Time:</strong> ${avgWaitingTime.toFixed(2)} <br> <strong>Average Turnaround Time:</strong> ${avgTurnaroundTime.toFixed(2)}`;
-
-//   displayGanttChart();
-// }
-
-// function displayGanttChart() {
-//   const chart = document.querySelector(".gantt-chart");
-//   chart.innerHTML = "";
-
-//   let totalTime = 0;
-//   for (let i = 0; i < processes.length; i++) {
-//     totalTime += processes[i].burstTime;
-//   }
-
-//   const blockWidth = 50;
-
-//   for (let i = 0; i < processes.length; i++) {
-//     const process = processes[i];
-//     const block = document.createElement("div");
-//     block.classList.add("block");
-//     block.innerText = process.name;
-//     block.style.width = `${(process.burstTime / totalTime) * 100 * blockWidth}px`;
-//     chart.appendChild(block);
-//   }
-// }
 function generateInputs() {
 	const processCount = document.getElementById('process-count').value;
 	const inputsContainer = document.getElementById('inputs-container');
@@ -205,3 +109,9 @@ function simulate() {
   `;
   resultsContainer.appendChild(resultRow);
 }  
+
+const promptButton = document.getElementById("prompt-button");
+
+promptButton.addEventListener("click", function() {
+  window.location.href = "quiz.html";
+});
